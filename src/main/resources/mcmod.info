@@ -1,0 +1,18 @@
+[
+    {
+        "modid": "chatter",
+        "name": "Chatter",
+        "description": "Slightly change the format of the in-game chat",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://github.com/Axieum/Chatter",
+        "updateUrl": "",
+        "authorList": [
+            "Axieum"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
+]
