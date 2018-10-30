@@ -20,6 +20,9 @@ public class EventChat
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onServerChat(ServerChatEvent event)
     {
+        if (!Settings.enabled)
+            return;
+
         String msg = "<{NAME}> {MESSAGE}";
 
         // Tweak the formatting.
