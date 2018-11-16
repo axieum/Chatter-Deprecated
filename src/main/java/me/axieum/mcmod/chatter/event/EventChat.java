@@ -9,9 +9,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.UUID;
+
 @Mod.EventBusSubscriber
 public class EventChat
 {
+    private static UUID last = null;
+
     /**
      * Transform server chat messages.
      *
@@ -38,6 +42,13 @@ public class EventChat
         // Substitute the message variables into the format.
         msg = msg.replace("{NAME}", event.getUsername());
         msg = msg.replace("{MESSAGE}", event.getMessage());
+
+        // Should we add a line break if new player?
+        if (Settings.gap && !event.getPlayer().getUniqueID().equals(last))
+        {
+            msg = "\n".concat(msg);
+            last = event.getPlayer().getUniqueID();
+        }
 
         // Override the message contents.
         event.setComponent(new TextComponentString(msg));

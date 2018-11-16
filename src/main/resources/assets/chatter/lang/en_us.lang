@@ -3,6 +3,9 @@
 config.enabled=Enabled
 config.enabled.tooltip=Should the mod be enabled?
 
+config.gap=Chat Gap
+config.gap.tooltip=Should a messages be grouped for same sender (using new line)?
+
 config.chat=Chat Formatting
 config.chat.tooltip=Configure various chat formats.
 

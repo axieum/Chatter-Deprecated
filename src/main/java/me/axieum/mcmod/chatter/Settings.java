@@ -16,6 +16,9 @@ public class Settings
     @Config.LangKey("config.enabled")
     public static boolean enabled = true;
 
+    @Config.LangKey("config.gap")
+    public static boolean gap = false;
+
     @Config.LangKey("config.chat")
     public static Chat chat = new Chat();
 
