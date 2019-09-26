@@ -1,0 +1,10 @@
+{
+  "config.enabled": "Enabled",
+  "config.enabled.tooltip": "Should the mod be enabled?",
+  "config.chat": "Chat Formatting",
+  "config.chat.tooltip": "Configure various chat formats",
+  "config.chat.formatGeneric": "Generic",
+  "config.chat.formatGeneric.tooltip": "Chat format used for standard players",
+  "config.chat.formatOperator": "Operators",
+  "config.chat.formatOperator.tooltip": "Chat format used for server operators"
+}
