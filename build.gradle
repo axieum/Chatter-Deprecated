@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 
 version = "${MOD_VERSION_MAJOR}.${MOD_VERSION_MINOR}.${MOD_VERSION_REVIS}"
 group = "${MOD_CLASS}.${MOD_ID}"
-archivesBaseName = "${MOD_ID}"
+archivesBaseName = "${MOD_NAME}-${MINECRAFT_VERSION}"
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
