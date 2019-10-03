@@ -8,5 +8,11 @@
   "config.chat.formatOperator": "Operators",
   "config.chat.formatOperator.tooltip": "Chat format used for server operators",
   "config.chat.replacements": "Replacements",
-  "config.chat.replacements.tooltip": "Regular expressions to match and replace"
+  "config.chat.replacements.tooltip": "Regular expressions to match and replace",
+  "config.event.usernameClickEnabled": "Enable Username Clicking",
+  "config.event.usernameClickEnabled.tooltip": "Should add clicking of a username in chat",
+  "config.event.usernameClickAction": "Username Click Action",
+  "config.event.usernameClickAction.tooltip": "Action to be used upon click of a username in chat (OPEN_URL, RUN_COMMAND, SUGGEST_COMMAND, CHANGE_PAGE)",
+  "config.event.usernameClickValue": "Username Click Value",
+  "config.event.usernameClickValue.tooltip": "Value to use in conjunction with username click action"
 }
