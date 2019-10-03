@@ -6,6 +6,8 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 @Mod.EventBusSubscriber
 public class Settings
@@ -19,6 +21,7 @@ public class Settings
 
     public static ForgeConfigSpec.BooleanValue ENABLED;
     public static ForgeConfigSpec.ConfigValue<String> FORMAT_GENERIC, FORMAT_OPERATOR;
+    public static ForgeConfigSpec.ConfigValue<List<List<String>>> REPLACEMENTS;
 
     static {
         // GENERAL
@@ -42,6 +45,11 @@ public class Settings
                                         .translation("config.chat.formatOperator")
                                         .define("formatOperator",
                                                 "<&c{NAME}&r> {MESSAGE}");
+
+        REPLACEMENTS = COMMON_BUILDER.comment("Regular expressions to match and replace")
+                                     .translation("config.chat.replacements")
+                                     .define("replacements", new ArrayList<>());
+
         COMMON_BUILDER.pop();
 
         // Publish config
