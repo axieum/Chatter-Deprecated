@@ -36,8 +36,18 @@ All placeholders should be wrapped in braces (e.g. "{NAME}").
 	formatOperator = "&c{NAME} &8>&r {MESSAGE}"
 	#Regular expressions to match and replace
 	replacements = [
-	    ["\\d{3}", "xxx"],
-	    ["only \\$\\d+\\.(\\d+)", "&lonly &r\\$0.$1"],
-	    ["remove"]
-    ]
+		["\\d{3}", "xxx"],
+		["only \\$\\d+\\.(\\d+)", "&lonly &r\\$0.$1"],
+		["remove"]
+	]
+
+#Event settings
+[event]
+	#Username Click Action
+	#Allowed Values: OPEN_URL, OPEN_FILE, RUN_COMMAND, SUGGEST_COMMAND, CHANGE_PAGE
+	usernameClickAction = "SUGGEST_COMMAND"
+	#Enable Username Clicking
+	usernameClickEnabled = true
+	#Username Click Value
+	usernameClickValue = "/tell {NAME} "
 ```
