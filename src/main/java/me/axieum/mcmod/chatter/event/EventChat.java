@@ -8,6 +8,8 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.List;
+
 @Mod.EventBusSubscriber
 public class EventChat
 {
@@ -32,13 +34,22 @@ public class EventChat
         else if (PlayerUtils.isOp(event.getPlayer()))
             msg = Settings.FORMAT_OPERATOR.get(); // Is operator
 
-        // Handle formatting codes
-        msg = msg.replaceAll("&([0-9a-fk-or])", PREFIX_CODE + "$1");
-        msg = msg.replace("\\n", "\n");
-
         // Substitute the message variables into the format
         msg = msg.replace("{NAME}", event.getUsername());
         msg = msg.replace("{MESSAGE}", event.getMessage());
+
+        // Handle replacements
+        for (List<String> entry : Settings.REPLACEMENTS.get()) {
+            try {
+                msg = msg.replaceAll(entry.get(0), entry.size() > 1 ? entry.get(1) : "");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Handle formatting codes
+        msg = msg.replaceAll("&([0-9a-fk-or])", PREFIX_CODE + "$1");
+        msg = msg.replace("\\n", "\n");
 
         // Override the message contents.
         event.setComponent(new StringTextComponent(msg));

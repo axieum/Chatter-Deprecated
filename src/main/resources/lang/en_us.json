@@ -6,5 +6,7 @@
   "config.chat.formatGeneric": "Generic",
   "config.chat.formatGeneric.tooltip": "Chat format used for standard players",
   "config.chat.formatOperator": "Operators",
-  "config.chat.formatOperator.tooltip": "Chat format used for server operators"
+  "config.chat.formatOperator.tooltip": "Chat format used for server operators",
+  "config.chat.replacements": "Replacements",
+  "config.chat.replacements.tooltip": "Regular expressions to match and replace"
 }
