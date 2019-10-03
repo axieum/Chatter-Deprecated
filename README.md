@@ -11,6 +11,7 @@
    * Supports capture groups
    * Configuration is in format `[["match", "replace"]...]`
      * _Be mindful of escape sequences_
+* Configurable action for clicking on a username in chat
 
 ## Placeholders
 All placeholders should be wrapped in braces (e.g. "{NAME}").
